@@ -1,0 +1,2 @@
+# ceazer
+A JavaScript project
