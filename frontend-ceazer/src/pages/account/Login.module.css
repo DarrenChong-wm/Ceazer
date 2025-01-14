@@ -1,0 +1,22 @@
+.formContainer {
+    display: flex;
+    flex-direction: column;
+    max-width: 200px;
+}
+
+.email,
+.password {
+    padding: 10px;
+    display: flex;
+    border: None;
+    border-bottom: 1px solid black;
+
+}
+
+
+.button {
+    width: 100%;
+    display: flex;
+    padding: 10px 100px;
+    border: None;
+}
