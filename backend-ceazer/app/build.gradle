@@ -1,0 +1,52 @@
+
+plugins {
+    id 'application'
+    id 'org.springframework.boot' version '3.2.0'
+    id 'io.spring.dependency-management' version '1.1.5'
+    id 'java'
+}
+
+version = '0.0.1-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.2'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher:1.8.2'
+
+    implementation 'com.google.guava:guava:30.1-jre'
+
+
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+
+    implementation 'org.springframework.boot:spring-boot-starter-security'
+    runtimeOnly 'org.postgresql:postgresql'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
+    implementation 'software.amazon.awssdk:dynamodb:2.30.20'
+
+    implementation 'software.amazon.awssdk:auth:2.30.20'
+    implementation 'software.amazon.awssdk:sdk-core:2.30.20'
+}
+
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(23)
+    }
+}
+
+application {
+    mainClass.set("org.example.App")
+}
+
+tasks.named('test') {
+    useJUnitPlatform()
+}
+
+tasks.test {
+    ignoreFailures = true
+}

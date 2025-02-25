@@ -64,7 +64,7 @@ case "`uname`" in
     ;;
 esac
 
-JARPATH=$APP_HOME/lib/app.jar
+JARPATH=$APP_HOME/lib/app-0.0.1-SNAPSHOT.jar
 
 # Determine the Java command to use to start the JVM.
 if [ -n "$JAVA_HOME" ] ; then

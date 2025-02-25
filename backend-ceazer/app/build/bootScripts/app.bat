@@ -63,7 +63,7 @@ set CMD_LINE_ARGS=%*
 :execute
 @rem Setup the command line
 
-set JARPATH=%APP_HOME%\lib\app.jar
+set JARPATH=%APP_HOME%\lib\app-0.0.1-SNAPSHOT.jar
 
 @rem Execute app
 "%JAVA_EXE%" %DEFAULT_JVM_OPTS% %JAVA_OPTS% %APP_OPTS%  -jar "%JARPATH%" %CMD_LINE_ARGS%
