@@ -1,0 +1,82 @@
+.wrapper {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+
+}
+
+.formContainer {
+    display: flex;
+    flex-direction: column;
+    max-width: 300px;
+}
+
+.inputContainer {
+
+    position: relative;
+    margin-bottom: 25px;
+    width: 100%;
+
+}
+
+input {
+    border: none;
+    outline: none;
+    padding: 8px;
+    font-size: 15px;
+    border-bottom: 1px solid rgb(241, 241, 241);
+    transition: border 0.1s ease-in-out;
+}
+
+input:focus {
+    border: 2px solid black;
+    border-radius: 5px;
+}
+
+input:focus::placeholder {
+    color: transparent;
+}
+
+.floatingLabel {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-90%);
+    font-size: 16px;
+    z-index: 1111;
+    color: rgb(170, 170, 170);
+    transition: 0.1s ease-in;
+    pointer-events: none;
+}
+
+input:focus~label,
+input:not(:placeholder-shown)~.floatingLabel {
+    top: 5px;
+    font-size: 11px;
+    color: black;
+    background: white;
+    padding: 0px 3px;
+}
+
+
+.button {
+    width: 100%;
+    display: flex;
+    padding: 12px 100px;
+    border: None;
+    justify-content: center;
+    white-space: nowrap;
+    opacity: 70%;
+    cursor: pointer;
+    border-radius: 3px;
+    transition: background-color 0.04s ease-in-out;
+}
+
+.button:hover {
+    opacity: 1;
+    background-color: rgb(22, 22, 22);
+    color: white;
+}
